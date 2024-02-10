@@ -1,0 +1,9 @@
+click
+httpx
+packaging
+rich
+
+black
+bandit
+mypy
+

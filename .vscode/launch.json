@@ -1,0 +1,152 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "hcs debug",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "plan",
+                "apply",
+                "-f",
+                "d91.yml"
+            ]
+        },
+        {
+            "name": "hcs login -d",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "login",
+                "-d"
+            ]
+        },
+        {
+            "name": "tenant plan",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "daas",
+                "tenant",
+                "plan",
+                "nanw",
+            ]
+        },
+        {
+            "name": "infra plan",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "daas",
+                "infra",
+                "plan",
+                "block1"
+            ]
+        },
+        {
+            "name": "plan destroy",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "plan",
+                "destroy",
+                "-f",
+                "t1.plan.yml",
+                "--sequential"
+            ]
+        },
+        {
+            "name": "plan deploy",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "plan",
+                "deploy",
+                "-f",
+                "s17.plan.yml",
+                "--sequential"
+            ]
+        },
+        {
+            "name": "UT",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/python3",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/tests",
+            "args": [
+                "-m",
+                "unittest",
+                "vhcs.cli.cmds.plan.test_plan.TestPlan",
+                "-v",
+                "--failfast"
+            ]
+        },
+        {
+            "name": "deploy",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "plan",
+                "apply",
+                "-f",
+                "t.plan.yml"
+            ]
+        },
+        {
+            "name": "test",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/hcs",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/lab",
+            "args": [
+                "plan",
+                "apply",
+                "-f",
+                "t.plan.yml"
+            ]
+        },
+    ]
+}
